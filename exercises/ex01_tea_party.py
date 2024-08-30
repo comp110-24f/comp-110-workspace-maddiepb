@@ -1,6 +1,6 @@
 """Outputs the amount of tea bags, treats, and money required for a number of people"""
 
-__author__ = 730487315
+__author__ = "730487315"
 
 
 def main_planner(guests: int) -> None:
