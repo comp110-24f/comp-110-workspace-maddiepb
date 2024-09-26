@@ -3,14 +3,16 @@
 __author__ = "730487315"
 
 
-def input_guess(secret_len: int) -> str:
+def input_guess(secret_word_len: int) -> str:
     """prompts for input and checks that it is the right length"""
-    guess: str = input(
-        f"Enter a {secret_len} letter word: "
-    )  # supposed to be {secret_len} because later
-    # input_guess will be called with len(secret) as the arguement for secret_len
-    while len(guess) != secret_len:
-        guess = input(f"That wasn't {secret_len} chars! Try again: ")
+    guess: str = input(f"Enter a {secret_word_len} character word: ")
+
+    while len(guess) != secret_word_len:
+        guess = input(
+            f"That wasn't {secret_word_len} chars! Try again: "
+        )  # supposed to be {secret_len} because later
+    # # input_guess will be called with len(secret) as the arguement for secret_len
+
     return guess
 
 
@@ -66,7 +68,7 @@ def main(secret: str) -> None:
     while turn <= 6 and won is False:
         print(f"== Turn {turn}/6 ==")
         guess: str = input_guess(
-            len(secret)
+            secret_word_len=len(secret)
         )  # local variable guess is output of function with arugment the length of the
         # secret word
         print(emojified(guess=guess, secret=secret))  # displays output of emojified
