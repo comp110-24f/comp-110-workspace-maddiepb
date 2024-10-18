@@ -2,11 +2,8 @@
 
 __author__ = "730487315"
 
-li: list[float] = [5.5, 5.0, 0.5]
-empt: list[float] = []
 
-
-def w_sum(vals: list[float]):
+def w_sum(vals: list[float]) -> float:
     """Uses a while loop to return sum of a given list of floats"""
     idx: int = 0
     sum: float = 0.0
@@ -17,7 +14,7 @@ def w_sum(vals: list[float]):
     return sum
 
 
-def f_sum(vals: list[float]):
+def f_sum(vals: list[float]) -> float:
     """Uses a for...in... loop to return sum of a given list of floats"""
     sum: float = 0.0
     for elem in vals:
@@ -25,7 +22,7 @@ def f_sum(vals: list[float]):
     return sum
 
 
-def f_range_sum(vals: list[float]):
+def f_range_sum(vals: list[float]) -> float:
     sum: float = 0.0
     for idx in range(0, len(vals)):
         sum += vals[idx]
